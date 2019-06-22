@@ -3,7 +3,7 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 RegisterServerEvent('Chasse:depece')
 AddEventHandler('Chasse:depece', function(legal)
-	local xPlayer = ESX.GetPlayerFromId(source)
+    local xPlayer = ESX.GetPlayerFromId(source)
     if legal then 
         xPlayer.addInventoryItem('viande', math.random(Config.Legal.nbParAnimalMin , Config.Legal.nbParAnimalMax))
     else
@@ -17,15 +17,15 @@ AddEventHandler('Chasse:revente', function(legal)
     if legal then 
         local nbViande = xPlayer.getInventoryItem('viande').count
         if nbViande <= 0 then
-            TriggerClientEvent('esx:showNotification', source, 'Je n\'ai plus de viande')			
+            TriggerClientEvent('esx:showNotification', source, 'Je n\'ai plus de viande')            
         else   
             xPlayer.removeInventoryItem("viande", 1)
-            xPlayer.addMoney(math.random(Config.Legal.PrixMin, Config.Legal.PrixMax))	
+            xPlayer.addMoney(math.random(Config.Legal.PrixMin, Config.Legal.PrixMax))    
         end
     else
         local nbViande = xPlayer.getInventoryItem('viande2').count
         if nbViande <= 0 then
-            TriggerClientEvent('esx:showNotification', source, 'Je n\'ai plus de viande')			
+            TriggerClientEvent('esx:showNotification', source, 'Je n\'ai plus de viande')            
         else   
             xPlayer.removeInventoryItem("viande2", 1)
             if Config.Illegal.ArgentSale then
