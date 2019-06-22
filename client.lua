@@ -1,5 +1,4 @@
 ESX = nil
---currentped = nil
 
 Citizen.CreateThread(function()
     while ESX == nil do
@@ -88,8 +87,7 @@ Citizen.CreateThread(function()
             if IsPedInAnyVehicle(GetPlayerPed(-1)) == false then
                 if DoesEntityExist(ped) and GetEntityHealth(ped) < 1 and IsPedInAnyVehicle(ped) == false then
                     local pedType = GetPedType(ped)
-                    if  pedType == 28 and IsPedAPlayer(ped) == false then--
-                        --currentped = pos
+                    if  pedType == 28 and IsPedAPlayer(ped) == false then
                         if distance <= 1.5 and ped  ~= GetPlayerPed(-1) and ped ~= oldped and ped ~= oldped2 then
                             local valid, legal = IsAnimalLegal(ped)
                             if valid and legal then
