@@ -11,7 +11,7 @@ La chasse repensée !
 
 ## Installation
 - Mettre le SQL, changer les nom si besoin
-- N'oubilez pas de démarrer la ressource ``` start chasse ``` 
+- N'oubilez pas de démarrer la ressource ``` start Chasse ``` 
 - Changez la config a votre sauce
 
 ## Utilisation
